@@ -1,0 +1,98 @@
+ 
+ <head>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head> 
+   <div class="topnav" id="header">
+	  <img src="aws.jpg" alt="Logo" class="active">
+	  <a href="#">Contact Sale</a>
+	  <div class="dropdown">
+		<button class="dropbtn">Product
+		</button>
+		<div class="dropdown-content">
+		  <a href="#">Software</a>
+		  <a href="#">Lens</a>
+		</div>
+	  </div>
+	  <a href="#">Solutions</a>
+	  <a href="#">Pricing</a>
+	  <div class="dropdown">
+		<button class="dropbtn">More
+		</button>
+		<div class="dropdown-content">
+		  <a href="#">About Us</a>
+		</div>
+	  </div>
+	  <c href="#">Sign Into the Console</c>
+	  <div class="dropdown2">
+		<button class="dropbtn">My Account
+		</button>
+		<div class="dropdown-content">
+		  <c href="#">AWS Management Console</c>
+		  <c href="#">Account Settings</c>
+		  <c href="#">Billing and Cost Management</c>
+		  <c href="#">Security Credentials</c>
+		  <c href="#">AWS Personal Health Dashboard</c>
+		</div>
+	  </div>
+	  <div class="dropdown2">
+		<button class="dropbtn">English
+		</button>
+		<div class="dropdown-content">
+		  <c href="#">Irish</c>
+		  <c href="#">German</c>
+		  <c href="#">Thai</c>
+		  <c href="#">Italian</c>
+		</div>
+	  </div>
+	  <a href="javascript:void(0);" class="icon" onclick="responsive()">&#9776;</a>
+  </div> 
+  <div class="container">
+    <h1>Contact</h1>
+    <hr>
+	<form id="form">
+		<label for="firstname"><b>First Name</b></label>
+		<input type="text" placeholder="First Name" name="firstname" required>
+
+		<label for="lastname"><b>Last Name</b></label>
+		<input type="text" placeholder="Last Name" name="lastname" required>
+		
+		<label for="email"><b>E-mail</b></label>
+		<input type="text" placeholder="Enter E-mail" name="email" required>
+
+		<label for="jobrole"><b>Job Role</b></label>
+		<select id="jobrole" name="jobrole">
+		  <option value="1">Engineer</option>
+		  <option value="2">Manager</option>
+		  <option value="3">Developer</option>
+		</select>
+		<label for="telephone"><b>Telephone</b></label>
+		<input type="text" placeholder="Enter telephone" name="telephone" required>
+	</form>
+    <hr>
+	<button type="submit" class="registerbtn" onclick="info()">Submit</button>
+  </div>
+  
+ <script>
+function responsive() {
+    var x = document.getElementById("header");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } 
+	else {
+        x.className = "topnav";
+    }
+}
+function info() {
+    var x = document.getElementById("form");
+	out = "";
+	for (var i = 0; i < x.length; i++) {
+			if(x.elements[i].value == "") {
+			 alert("Please fill all information.")
+			 return 0;
+			}
+			out += x.elements[i].name+":"+x.elements[i].value;
+				out += " ";
+	}
+    alert(out);
+}
+</script>
