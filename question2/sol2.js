@@ -20,5 +20,5 @@ for (var y = 1; y <= n; y++) {
             }
         }
     }
-    console.log(line)
+    console.log(line) 
 }
